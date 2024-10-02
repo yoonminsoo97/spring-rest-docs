@@ -1,0 +1,37 @@
+= Spring Rest Docs Example
+:sectnums:
+:sectnumlevels: 2
+:doctype: article
+:icons: font
+:source-highlighter: rouge
+:toc-title: 목차
+:toc: left
+:toclevels: 2
+
+이 API 문서는 Spring Rest Docs 프로젝트의 산출물입니다.
+
+== 게시글
+
+=== 작성
+
+==== 요청
+
+include::{snippets}/post-write200ok/http-request.adoc[]
+
+==== 응답
+
+include::{snippets}/post-write200ok/http-response.adoc[]
+include::{snippets}/post-write400-bad-request/http-response.adoc[]
+include::{snippets}/post-write400-bad-request/response-fields.adoc[]
+
+=== 상세 조회
+
+==== 요청
+
+include::{snippets}/post-detail200ok/http-request.adoc[]
+include::{snippets}/post-detail200ok/path-parameters.adoc[]
+
+==== 응답
+
+include::{snippets}/post-detail200ok/http-response.adoc[]
+include::{snippets}/post-detail200ok/response-fields.adoc[]
