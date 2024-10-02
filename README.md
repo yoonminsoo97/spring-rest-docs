@@ -1,6 +1,6 @@
 # Spring Rest Docs Example
 
-#### [Spring Rest Docs 예제 문서 바로가기](src/main/resources/static/docs/index.html)
+#### [Spring Rest Docs 예제 문서 바로가기](https://raw.githack.com/yoonminsoo97/spring-rest-docs/main/src/main/resources/static/docs/index.html)
 
 ### 프로젝트 환경
 
