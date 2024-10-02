@@ -10,21 +10,36 @@
 
 이 API 문서는 Spring Rest Docs 프로젝트의 산출물입니다.
 
-== 게시글
+== Post
 
-=== 작성
+=== 게시글 작성
+
+==== 200 OK
 
 ==== 요청
 
 include::{snippets}/post-write200ok/http-request.adoc[]
+include::{snippets}/post-write200ok/request-fields.adoc[]
 
 ==== 응답
 
 include::{snippets}/post-write200ok/http-response.adoc[]
+
+==== 400 Bad Request
+
+==== 요청
+
+include::{snippets}/post-write400-bad-request/http-request.adoc[]
+include::{snippets}/post-write200ok/request-fields.adoc[]
+
+==== 응답
+
 include::{snippets}/post-write400-bad-request/http-response.adoc[]
 include::{snippets}/post-write400-bad-request/response-fields.adoc[]
 
-=== 상세 조회
+=== 게시글 상세조회
+
+==== 200 OK
 
 ==== 요청
 
@@ -35,3 +50,15 @@ include::{snippets}/post-detail200ok/path-parameters.adoc[]
 
 include::{snippets}/post-detail200ok/http-response.adoc[]
 include::{snippets}/post-detail200ok/response-fields.adoc[]
+
+==== 404 Not Found
+
+==== 요청
+
+include::{snippets}/post-detail404-not-found/http-request.adoc[]
+include::{snippets}/post-detail404-not-found/path-parameters.adoc[]
+
+==== 응답
+
+include::{snippets}/post-detail404-not-found/http-response.adoc[]
+include::{snippets}/post-detail404-not-found/response-fields.adoc[]

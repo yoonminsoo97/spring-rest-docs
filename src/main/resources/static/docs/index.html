@@ -661,10 +661,10 @@ pre.rouge {
 <div id="toc" class="toc2">
 <div id="toctitle">목차</div>
 <ul class="sectlevel1">
-<li><a href="#_게시글">1. 게시글</a>
+<li><a href="#_post">1. Post</a>
 <ul class="sectlevel2">
-<li><a href="#_작성">1.1. 작성</a></li>
-<li><a href="#_상세_조회">1.2. 상세 조회</a></li>
+<li><a href="#_게시글_작성">1.1. 게시글 작성</a></li>
+<li><a href="#_게시글_상세조회">1.2. 게시글 상세조회</a></li>
 </ul>
 </li>
 </ul>
@@ -679,10 +679,14 @@ pre.rouge {
 </div>
 </div>
 <div class="sect1">
-<h2 id="_게시글">1. 게시글</h2>
+<h2 id="_post">1. Post</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_작성">1.1. 작성</h3>
+<h3 id="_게시글_작성">1.1. 게시글 작성</h3>
+<div class="sect3">
+<h4 id="_200_ok">200 OK</h4>
+
+</div>
 <div class="sect3">
 <h4 id="_요청">요청</h4>
 <div class="listingblock">
@@ -697,6 +701,37 @@ pre.rouge {
 </span><span class="p">}</span></code></pre>
 </div>
 </div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>title</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">게시글 제목</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>writer</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">게시글 작성자</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>content</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">게시글 내용</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect3">
 <h4 id="_응답">응답</h4>
@@ -708,6 +743,59 @@ pre.rouge {
 success</code></pre>
 </div>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_400_bad_request">400 Bad Request</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_요청_2">요청</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="http"><span class="nf">POST</span> <span class="nn">/api/posts</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json;charset=UTF-8</span>
+
+<span class="p">{</span><span class="w">
+  </span><span class="nl">"title"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"title"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"writer"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"content"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"content"</span><span class="w">
+</span><span class="p">}</span></code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>title</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">게시글 제목</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>writer</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">게시글 작성자</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>content</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">게시글 내용</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_응답_2">응답</h4>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight nowrap"><code data-lang="http"><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">400</span> <span class="ne">Bad Request</span>
@@ -791,9 +879,13 @@ success</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_상세_조회">1.2. 상세 조회</h3>
+<h3 id="_게시글_상세조회">1.2. 게시글 상세조회</h3>
 <div class="sect3">
-<h4 id="_요청_2">요청</h4>
+<h4 id="_200_ok_2">200 OK</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_요청_3">요청</h4>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight nowrap"><code data-lang="http"><span class="nf">GET</span> <span class="nn">/api/posts/1</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span></code></pre>
@@ -820,7 +912,7 @@ success</code></pre>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_응답_2">응답</h4>
+<h4 id="_응답_3">응답</h4>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight nowrap"><code data-lang="http"><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
@@ -871,6 +963,95 @@ success</code></pre>
 </tbody>
 </table>
 </div>
+<div class="sect3">
+<h4 id="_404_not_found">404 Not Found</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_요청_4">요청</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="http"><span class="nf">GET</span> <span class="nn">/api/posts/1</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span></code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 2. /api/posts/{postId}</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">게시글 번호</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_응답_4">응답</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="http"><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">404</span> <span class="ne">Not Found</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/problem+json;charset=UTF-8</span>
+
+<span class="p">{</span><span class="w">
+  </span><span class="nl">"title"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Not Found"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"status"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">404</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"detail"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"게시글이 존재하지 않습니다."</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"instance"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"/api/posts/1"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"error_code"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"E404001"</span><span class="w">
+</span><span class="p">}</span></code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>title</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">에러 요약</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>status</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HTTP 상태 코드</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>detail</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">에러 설명</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>instance</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">에러 발생 URI</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>error_code</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">에러 코드</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 </div>
@@ -878,7 +1059,7 @@ success</code></pre>
 <div id="footer">
 <div id="footer-text">
 Version 0.0.1-SNAPSHOT<br>
-Last updated 2024-10-02 22:32:37 +0900
+Last updated 2024-10-02 23:29:55 +0900
 </div>
 </div>
 </body>
